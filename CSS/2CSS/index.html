@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        button{
+            padding: 90px 90px 96px 90px;
+           
+        }
+        .box
+        {
+            border: 1px solid black;
+        }
+        #but
+        {
+            border: 81px dashed red;
+            border-radius: 30px;
+         margin: 20px;
+         
+        }
+        #but:active{
+            background-color: rgba(61, 82, 242, 0.854);
+        }
+        /* #but:hover
+        {
+            background-color: salmon;
+        } */
+         .ol1 :first-child{
+            color: rgb(216, 85, 245);
+         }
+         .ol1 :last-child{
+            color: salmon;
+         }
+        .form-input
+        {
+        border: 2px solid rgb(60, 221, 178);
+        }
+        input:focus
+        {
+            border: 12px solid rgb(203, 250, 149);
+        }
+#hii
+{
+    margin: 20px 100px 400px 100px;
+}
+/* decendent selecter */
+/* div p{color: burlywood;} */
+/* Child Selecter */
+div > p{color: blue;}
+
+        </style>
+</head>
+<body>
+    <h1>CSS Box Model</h1>
+    <button>Submit</button>
+    <div class="box">
+        <button id="but">Hellow</button>
+        <button id="hii"> hii</button>
+    </div>
+    <div>
+        <label for="name">NAME</label>
+        <input class="form-input" type="text" placeholder="Enter your name">
+    </div>
+    <div>
+        <ol class="ol1">
+            <li>jii</li>
+            <li>hann</li>
+            <li>main</li>
+            <li>hoon</li>
+            <li>Khalnayak</li>
+        </ol>
+    </div>
+
+
+    <div>
+        <p>Direct Child (blue & Green)</p>
+        <section>
+            <p>Nested Child (Blue Only)</p>
+        </section>
+    </div>
+
+</body>
+</html>

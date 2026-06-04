@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 + p {
+            color: red;
+        }
+        h1 ~ p {
+            color: green;
+        }
+        /* multiple selecters */
+        #a, #b, #c
+        {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        } 
+        /* combined selecters */
+        p.text{
+            color: blue;
+        }
+/* Nth Child selecter */
+        li:nth-child(2)
+        {
+            color: red;
+        }
+/* even odd selecters */
+        li:nth-child(even)
+        {
+            color: green;
+        }
+        li:nth-child(odd)
+        {
+            color: blue;
+        }
+
+
+
+/* First and last child selecters */
+        li:first-child
+        {
+            color: red;
+        }
+        li:last-child
+        {
+            color: rgb(90, 191, 225);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Heading</h1>
+        <p>First Paragraph (Style)</p>
+        <p>Second Paragraph (Style)</p>
+    </div>
+
+<div>
+    <h1 id="a">Hello bhai</h1>
+    <h2 id="b">Hello bhaiji</h2>
+    <p id="c">Hello bhaijan</p>   
+    <p>are bahi toda aur dal de</p> 
+</div>
+
+
+<div>
+    <ul>
+        <li class="text">Dabang</li>
+        <li class="text">Dabang 2</li>
+        <li class="text">Dabang 3</li>
+        <li class="text">Dabang 4</li>
+        <li class="text">Dabang 5</li>
+    </ul>
+</div>
+
+</body>
+</html>
