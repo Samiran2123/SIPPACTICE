@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 400px;
+            /* width: 600px; */
+            display: flex;
+            display: grid;
+            
+            /* grid-template-columns: 1fr 1fr; */
+            grid-template-areas: "ls-header upper-header upper-header s-header"
+                                 "ls-header main-content main-content side-content"
+                                 "ls-header main-content main-content side-content"
+                                 "footer footer footer footer"
+            ;
+            gap: 5px;
+            ;
+        }
+
+        .item {
+            border-radius: 10px;
+            border: 1px solid black;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           /* width: 100px; */
+        }
+
+        .i {
+            background-color: rgb(233, 61, 164);
+            grid-area: s-header;
+            
+        }
+        .i:hover{
+            transform: scale(1.1);
+        }
+        
+        .ii {
+            background-color: aquamarine;
+            grid-area: upper-header;
+        }
+        .ii:hover{
+            transform: scale(1.1);
+        }
+        
+        .iii {
+            background-color: rgba(170, 226, 195, 0.671);
+            grid-area: ls-header;
+            transition: transform 2s ease-in-out;
+        }
+        .iii:hover{
+            transform: scale(1.1) rotateZ(360deg);
+            
+        }
+
+        .iv {
+            background-color: rgb(86, 51, 228);
+            grid-area: side-content;
+        }
+        .iv:hover{
+            transform: scale(1.1);
+        }
+
+        
+        .v {
+            background-color: rgb(233, 52, 233);
+            grid-area: footer;
+        }
+        .v:hover{
+            transform: scale(1.1);
+        }
+        .vi {
+            background-color: rgb(228, 108, 17);
+            grid-area: main-content;
+        }
+        .vi:hover{
+            transform: scale(1.1);
+        }
+
+
+        @media (max-width: 700px){
+            container{
+                /* grid-template-columns: repeat(); */
+                grid-template-areas: "s-header"
+                                     "upper-header"
+                                     "ls-header" 
+                                     "side-content"
+                                     "footer"
+                                     "main-content";
+            } 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item i"> I</div>
+        <div class="item ii"> II</div>
+        <div class="item iii"> III</div>
+        <div class="item iv"> IV</div>
+        <div class="item v"> V</div>
+        <div class="item vi">VI</div>
+
+    </div>
+</body>
+
+</html>
