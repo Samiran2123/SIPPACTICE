@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            gap: 20px;
+        }
+
+        .items{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+        }
+        
+        /* Translate- */
+
+        .item1{
+            transition: transform 3s ease-in-out;
+        }
+
+        .item1:hover{
+/* It defines what should we do for the transition */
+            transform: translateX(1220px);
+            /* transform: translateY(-120px); */
+            /* transition-property: translateX(1200px); */
+/* giving the time or the speed during  transition*/
+            transition-duration: 3s;  
+            /* transition-timing-function: ease-in-out; */
+            /* transition-timing-function: linear; */
+        }
+
+        .item2{
+            transition: transform 1s ease-in-out;
+        }
+
+        .item2:hover{
+            transform: translateY(-120px);
+        }
+
+        
+
+        /* SCALE */
+
+        .item3{
+            transition: transform 1s ease-in-out;
+        }
+
+        .item3:hover{
+            /* transform: scale(1.1);
+            transform: scaleY(1.1); */
+            transform: scaleX(1.1);
+        }
+
+        /* ROTATE */
+
+        .item4{
+            transition: transform 3s ease-in-out;
+        }
+
+        .item4:hover{
+            /* transform: rotate(1440deg); */
+            transform: rotateX(360deg);
+            /* transform: rotatey(180deg); */
+        }
+
+        /* ALL */
+
+        .item5{
+            transition: transform 3s ease-in-out;
+        }
+
+        .item5:hover{
+            transform: rotate(360deg) scale(1.1) translateX((120px));
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">Box 01</div>
+        <div class="items item2">Box 02</div>
+        <div class="items item3">Box 03</div>
+        <div class="items item4">Box 04</div>
+        <div class="items item5">Box 05</div>
+    </div>
+</body>
+</html>
