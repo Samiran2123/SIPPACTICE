@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <DIV class="container">
+        <h1>Hello Guys</h1>
+    </DIV>
+
+    <div class="box"></div>
+<script>
+    const cont = document.getElementsByClassName('container')
+    console.log(cont)
+
+    const tag = document.getElementsByName('h1')
+    console.log(tag)
+
+    const ids = document.getElementById('box')
+    console.log(ids)
+
+    const query = document.querySelector('.container')
+    console.log(query)
+
+     const cont = document.querySelector('container')
+    console.log(cont)
+
+    const tag = document.getElementsByName('h1')
+    console.log(tag)
+
+    const ids = document.getElementById('box')
+    console.log(ids)
+
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello! Guys</h1>
+        <div class="city">
+            <p>We are present in INDORE.</p>
+        </div>
+    </div>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+<script>
+    // const getId = document.getElementById("container");
+    // console.log(getId);
+
+    // const getClass = document.getElementsByClassName("city");
+    // console.log(getClass);
+
+    // const heading = document.getElementsByTagName("h1")[0];
+    // console.log(heading);
+
+    const getId = document.querySelector('#container');
+    console.log(getId);
+
+    const getClass = document.querySelector('.city');
+    console.log(getClass);
+
+    const heading = document.querySelector('h1');
+    console.log(heading);
+
+    const list = document.querySelectorAll('li');
+    console.log(list);
+    list.forEach((li) => {
+        console.log(li);
+        li.style.color = 'red'
+        li.style.listStyle = 'none'
+        li.style.backgroundColor = 'blue'
+        li.style.backgroundColor = 'pink'
+        li.style.fontSize = '200px'
+    });
+</script>
+
+</html>

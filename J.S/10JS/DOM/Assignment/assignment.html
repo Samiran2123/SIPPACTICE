@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <h1>Hello bhai Sahab</h1>
+    </div>
+
+    <div class=" para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur est repellendus placeat pariatur maiores quas, in minima tenetur, voluptate aliquam fugit laudantium et? A quibusdam cum architecto neque ab aliquid.
+        Maxime, deserunt animi. Earum quis molestiae, saepe esse alias odit minus repellendus ut velit quae. Cum dolores enim quo illum earum facilis, eos tenetur repellendus totam consequatur, adipisci, nulla laboriosam?
+        Accusamus labore fugiat incidunt fuga ea ratione officia officiis, assumenda sit enim aliquam expedita dignissimos atque possimus tempore ducimus optio nostrum in laboriosam placeat quia! Debitis quaerat optio asperiores dicta.
+        Explicabo voluptatibus, quam omnis recusandae ipsum ea vero. Eveniet quis autem impedit, blanditiis consectetur expedita maiores quae eos vero perspiciatis accusamus cum ea dignissimos facilis atque provident! Nihil, aspernatur debitis.
+        Perferendis consectetur sapiente at deserunt ipsam corrupti reprehenderit dolore adipisci. Sapiente quasi beatae voluptatem corrupti expedita qui hic ipsam vel, possimus tempore eaque ab rerum eum quia. Sint, vitae. Harum?
+    </div>
+    <div>
+        <ul>
+            <li>Hai Ji </li>
+            <li>Kaisan Ba</li>
+            <li>Sab  thik</li>
+        </ul>
+    </div>
+
+    <button>Main Hoon</button>
+
+
+    <script>
+        const head = document.querySelector('h1')
+        head.style.color = 'red'
+        
+        const parag = document.querySelector('para')
+        parag.style.color = 'blue'
+
+        const order = document.querySelectorAll('li')
+        order.forEach(el => {
+            el.style.listStyle = 'none'
+        });
+
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', ()=>{
+            window.location.href = 'contact.html'
+        })
+    </script>
+</body>
+</html>

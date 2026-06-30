@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #ffffff;
+            color: #111;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .inp {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+        .BTN {
+            padding: 8px 12px;
+            margin-left: 6px;
+            background: #2196f3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .tasklist {
+            margin-top: 16px;
+            padding-left: 0;
+        }
+        .taskName {
+            list-style: none;
+            padding: 10px;
+            background: #f7f7f7;
+            margin-bottom: 10px;
+        }
+        .btnGroups button {
+            margin-left: 6px;
+            padding: 5px 8px;
+            border: 1px solid #999;
+            background: #eee;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input class="inp" type="text" placeholder="Enter a task">
+    <button class="BTN">Add</button>
+    <ul class="tasklist"></ul>
+    <script>
+        const inp = document.querySelector('.inp');
+        const btn = document.querySelector('.BTN');
+        const tasklist = document.querySelector('.tasklist');
+
+        btn.addEventListener('click', () => {
+            const task = inp.value.trim();
+            if (!task) return;
+
+            const li = document.createElement('li');
+            li.className = 'taskName';
+            li.innerHTML = task + ' <span class="btnGroups">' +
+                '<button class="up">up</button>' +
+                '<button class="down">down</button>' +
+                '<button class="de">del</button>' +
+                '</span>';
+
+            tasklist.appendChild(li);
+            inp.value = '';
+        });
+    </script>
+</body>
+</html>

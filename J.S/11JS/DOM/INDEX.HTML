@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+        }
+
+        .box{
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button class="inc">Increase</button>
+        <p>0</p>
+        <button class="dec">Decrease</button>
+    </div>
+
+    <!-- <div class="container"></div> -->
+
+    <script>
+        // alert(), confirm(), prompt()
+        // const heading = document.createElement('h1');
+        // heading.textContent = 'I am inside container'
+
+        // const container = document.querySelector('.container');
+        // container.appendChild(heading);
+
+        const increase = document.querySelector('.inc');
+        let num = document.querySelector('p');
+        console.log(num.innerText);
+        console.log(num.textContent);
+
+        increase.addEventListener('click', () => {
+            // x = Number(num.innerText);
+            // x += 1;
+            // num.innerText = x;
+            num.innerText = Number(num.innerText) + 1;
+        });
+
+        const decrease = document.querySelector('.dec');
+        decrease.addEventListener('click', () => {
+            // x = Number(num.innerText);
+            // x -= 1;
+            // num.innerText = x;
+            num.innerText = Number(num.innerText) - 1;
+        });
+
+    </script>
+</body>
+</html>
