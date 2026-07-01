@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter UserName" id="userName">
+    <button>Fetch</button>
+    <ul>
+
+    </ul>
+
+
+    <script>
+        const ull = document.querySelector('ul')
+        const userName = document.querySelector('input')
+        const btn = document.querySelector('button')
+
+        
+
+
+        async function getDAta(userName) {
+            try {
+                const response = await fetch(`https://api.github.com/users/${userName}`);
+                const data = await response.json();
+                const list = document.createElement('li')
+
+                list.innerHTML = `Login: ${data.login} 
+                         id: ${data.id}
+                         url: ${data.url}
+                         TotalRepos: ${data.public_repos}`
+                ull.appendChild(list)
+                list.style.margin = '20px'
+
+
+            } catch (err) {
+                console.log(err)
+            }
+        }
+      
+
+
+        btn.addEventListener('click', () =>  {
+             const name = userName.value
+             getDAta(name)
+        })
+    </script>
+</body>
+
+</html>

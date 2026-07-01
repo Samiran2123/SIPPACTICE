@@ -66,12 +66,34 @@
             li.innerHTML = task + ' <span class="btnGroups">' +
                 '<button class="up">up</button>' +
                 '<button class="down">down</button>' +
-                '<button class="de">del</button>' +
+                '<button class="del">del</button>' +
                 '</span>';
 
             tasklist.appendChild(li);
             inp.value = '';
         });
+        tasklist.addEventListener('click',(ev)=>{
+           let list = ev.target;
+           console.log(list)
+           if(list.classList.contains('up')){
+            let parentElement = list.parentElement.parentElement;
+            let previousElement = parentElement.previousElementSibling;
+            if(previousElement){
+
+                tasklist.insertBefore(parentElement,previousElement);
+            }
+           }else if(list.classList.contains('down')){
+            let parentElement = list.parentElement.parentElement;
+            let nextElement = parentElement.nextElementSibling;
+            if(nextElement){
+
+                tasklist.insertBefore(nextElement,parentElement);
+            }
+           }else if(list.classList.contains('del')){
+              let parentElement = list.parentElement.parentElement;
+              parentElement.remove();
+           }
+        })
     </script>
 </body>
 </html>

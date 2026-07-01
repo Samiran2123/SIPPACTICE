@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Naveshwar Ki Duniya</h1>
+<div class="btns">
+    <button class="red"> Red</button>
+    <button class="blue">blue</button>
+    <button class="babypink">Baby Pink</button>
+
+    <script>
+       const btn = document.querySelector('.btns')
+        // const red = document.querySelector('.red')
+        // const blue = document.querySelector('.blue')
+        // const babypink = document.querySelector('.babypink')
+
+        // red.addEventListener('click',(a)=>{
+        //     document.body.style.backgroundColor = 'red'
+        // })
+
+
+        // blue.addEventListener('click',(b)=>{
+        //     document.body.style.backgroundColor = 'blue'
+        // })
+
+
+        // babypink.addEventListener('click',(bp)=>{
+        //     document.body.style.backgroundColor = 'pink'
+        // })
+    btn.addEventListener('click', (Naveshwar) =>{
+        let data = Naveshwar.target;
+        if(data.classList.contains('red')){
+            localStorage.setItem("savedColor",'red')
+            document.body.style.backgroundColor = 'red'
+        }
+
+        else if(data.classList.contains('blue')){
+            localStorage.setItem("savedColor",'blue')
+            document.body.style.backgroundColor = 'blue'
+        }
+
+        // else if(data.classList.contains('Baby Pink')){
+        //     localStorage.setItem("savedColor",'#F4C2C2')
+        //     document.body.style.backgroundColor = '#F4C2C2'
+        // }
+        else if (data.classList.contains('babypink')) {
+            localStorage.setItem("savedColor",'#F4C2C2')
+  document.body.style.backgroundColor = '#F4C2C2';
+}
+
+    })
+
+    </script>
+</div>
+</body>
+</html>
