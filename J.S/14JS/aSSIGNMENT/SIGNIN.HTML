@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="Email" placeholder="Email"><br>
+    <input type="text" class="Password" placeholder="Password"><br>    
+    <button class="Login" >Login</button></a>
+
+
+    <script>
+        const email = document.querySelector('.Email')
+        const password = document.querySelector('.Password')
+        const login = document.querySelector('.Login')
+         login.addEventListener('click', () => {
+      
+      const e = localStorage.getItem('user')
+      const data = JSON.parse(e)
+      if (password.value == data.password && email.value == data.email) {
+     window.location.href = 'MIAN.HTML'; 
+      }
+          })    
+           
+</script>
+</body>
+</html>

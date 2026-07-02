@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="Name" placeholder="Name"><br>
+    <input type="text" class="Email" placeholder="Email"><br>
+    <input type="text" class="Password" placeholder="Password"><br>
+    <button class="signup">Sign Up</button>
+    
+    <a href="SIGNIN.HTML"><button class="Login" >Login</button></a>
+
+
+    <script>
+        const name = document.querySelector('.Name')
+        const email = document.querySelector('.Email')
+        const password = document.querySelector('.Password')
+        const signup = document.querySelector('.signup')
+        const login = document.querySelector('.login')
+         signup.addEventListener('click', () => {
+            const credentials = {
+             "name": name.value,
+             "email": email.value,
+             "password": password.value
+            }
+        //     const userObj = JSON.stringfy(credentials);
+        //    localStorage.setItem("Users",userObj);
+        const randomkey = Math.floor(Math.random() * 10001)
+     const userObj = JSON.stringify(credentials);
+            localStorage.setItem("user", userObj);
+
+          })    
+           
+</script>
+</body>
+</html>
